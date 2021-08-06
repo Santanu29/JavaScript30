@@ -24,13 +24,13 @@ const comments = [
 // 	return currentYear - person.year > 19 ? true : false;
 // });
 
-const isAdult = people.some((person) => {
+const isAdult = people.some(person => {
 	return new Date().getFullYear() - person.year >= 19;
 });
 
 console.log(isAdult);
 
-const everyAdult = people.every((person) => {
+const everyAdult = people.every(person => {
 	new Date().getFullYear() - person.year > 19;
 });
 
@@ -44,13 +44,12 @@ console.log(everyAdult);
 // 	if (comment.id === 823423) return true;
 // });
 
-const comment = comments.find((comment) => comment.id === 823423);
+const comment = comments.find(comment => comment.id === 823423);
 
 console.log(comment);
-
-const index = comments.findIndex((comment) => comment.id === 823423);
-console.log(index);
 
 // Array.prototype.findIndex()
 // Find the comment with this ID
 // delete the comment with the ID of 823423
+const index = comments.findIndex(comment => comment.id === 823423);
+console.log(index);

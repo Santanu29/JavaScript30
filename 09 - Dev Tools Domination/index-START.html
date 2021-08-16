@@ -77,7 +77,15 @@
 			console.count("Debasmita");
 			console.count("Santanu");
 			console.count("Santanu");
+
 			// timing
+			console.time("fetching data");
+			fetch("https://api.github.com/users/wesbos")
+				.then((data) => data.json())
+				.then((data) => {
+					console.timeEnd("fetching data");
+					console.log(data);
+				});
 		</script>
 	</body>
 </html>
